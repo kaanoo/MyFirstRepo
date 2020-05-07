@@ -19,7 +19,7 @@ _Include a concise description of your project here. Be sure to include the prop
 
 [Group Meetings Log](group/meetingslog.md)
 #### Group Members
-- [Lamia Başak Amaç](g2G/Lamia_log.md)    _(full name & link to personal log file)_
+- [Lamia Başak Amaç](g2G/LamiaBaşakAmaç_log.md)    _(full name & link to personal log file)_
 - [Ege Kaan Eren](g2G/member2_log.md)
 - [Alper Kandemir](g2G/member3_log.md)
 - [Bora Fenari Köstem](g2G/member4_log.md)
