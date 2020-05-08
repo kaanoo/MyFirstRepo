@@ -1,125 +1,53 @@
-package com.example.bilkentradio;
+package com.example.bilclub;
 
-import android.media.AudioManager;
-import android.media.MediaPlayer;
-import android.os.AsyncTask;
-import android.support.v7.app.AppCompatActivity;
+import androidx.annotation.ColorInt;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+
+
+import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.ProgressBar;
 
-import java.io.IOException;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class MainActivity extends AppCompatActivity {
-
-  Button b_play;
-  MediaPlayer mediaPlayer;
-  Button b_pause;
-  boolean prepared = false;
-  boolean started = false;
-
-
-  String stream = "http://stream.radioreklama.bg/radio1rock128";
+    Toolbar toolbar;
+    ProgressBar pb;
+    ImageView v;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        b_play = (Button) findViewById(R.id.b_play);
-        b_play.setEnabled(false);
-        b_play.setText("LOADING");
 
 
-        b_pause = (Button) findViewById(R.id.b_pause);
-        b_pause.setEnabled(false);
-        b_pause.setText("LOADING");
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference myRef = database.getReference("accounts");
+
+        Account a = new Account("Azer", "CS", 21555555, "");
+        myRef.push().setValue(a);
 
 
-        mediaPlayer = new MediaPlayer();
-        mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
+        pb = (ProgressBar)findViewById(R.id.progressBar);
+        toolbar = findViewById(R.id.toolbar);
+        toolbar.setTitle("   Bilclub");
+        toolbar.setTitleTextColor(Color.BLACK);
 
-        new PlayerTask().execute(stream);
-
-        b_pause.setOnClickListener(new View.OnClickListener() {
+        toolbar.setLogo(R.drawable.ic_contact_mail_black_24dp);
+        setSupportActionBar(toolbar);
+        v = findViewById(R.id.imageView4);
+        v.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-
-                started = false;
-            mediaPlayer.pause();
-            b_play.setText("PLAY");
-
             }
-
         });
+        // Write a message to the database
 
-
-        b_play.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-
-                    started = true;
-                    mediaPlayer.start();
-                    b_play.setText("PAUSE");
-
-
-            }
-
-        });
-
-    }
-
-
-    class PlayerTask  extends AsyncTask<String, Void, Boolean > {
-
-
-        @Override
-        protected Boolean doInBackground(String... strings) {
-try {
-    mediaPlayer.setDataSource(strings[0]);
-    mediaPlayer.prepare();
-    prepared = true;
-} catch (IOException e) {
-    e.printStackTrace();
-}
-
-     return prepared;
-        }
-
-        @Override
-        protected void onPostExecute(Boolean aBoolean) {
-            super.onPostExecute(aBoolean);
-
-            b_play.setEnabled(true);
-            b_play.setText("PLAY");
-
-
-
-        }
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-
-        if(started){
-            mediaPlayer.pause();
-        }
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        if(started)
-            mediaPlayer.start();
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        if(prepared){
-            mediaPlayer.release();
-        }
     }
 }
