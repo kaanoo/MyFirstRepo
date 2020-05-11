@@ -1,53 +1,31 @@
-package com.example.bilclub;
-
-import androidx.annotation.ColorInt;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-
-
+package com.example.bilkentnews;
+import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ImageView;
-import android.widget.ProgressBar;
+import android.view.View.OnClickListener;
+import android.widget.Button;
 
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
+public class MainActivity extends Activity {
 
-public class MainActivity extends AppCompatActivity {
-    Toolbar toolbar;
-    ProgressBar pb;
-    ImageView v;
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    private Button button;
+
+    public void onCreate(Bundle savedInstanceState) {
+        final Context context = this;
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        button = (Button) findViewById(R.id.buttonUrl);
 
+        button.setOnClickListener(new OnClickListener() {
 
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference("accounts");
-
-        Account a = new Account("Azer", "CS", 21555555, "");
-        myRef.push().setValue(a);
-
-
-        pb = (ProgressBar)findViewById(R.id.progressBar);
-        toolbar = findViewById(R.id.toolbar);
-        toolbar.setTitle("   Bilclub");
-        toolbar.setTitleTextColor(Color.BLACK);
-
-        toolbar.setLogo(R.drawable.ic_contact_mail_black_24dp);
-        setSupportActionBar(toolbar);
-        v = findViewById(R.id.imageView4);
-        v.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-
+            public void onClick(View arg0) {
+                Intent intent = new Intent(context, BilkentNewsActivity.class);
+                startActivity(intent);
             }
         });
-        // Write a message to the database
-
     }
 }
