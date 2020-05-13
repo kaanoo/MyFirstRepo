@@ -24,7 +24,7 @@ _Include a concise description of your project here. Be sure to include the prop
 - [Alper Kandemir](g2G/member3_log.md)
 - [Bora Fenari Köstem](g2G/member4_log.md)
 - [Kaan Yüksel](g2G/member5_log.md)
-- [Azer](g2G/member6_log.md)
+- [Azer Hasanaliyev](g2G/member6_log.md)
 
 ****
 **Instructor:** _(David Davenport)_   **TA:**  _(Irmak Türköz)_
