@@ -1,31 +1,99 @@
-package com.example.bilkentnews;
-import android.app.Activity;
-import android.content.Context;
-import android.content.Intent;
+package me.borakostem.newchat;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.graphics.Color;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
+import android.os.StrictMode;
+import android.text.method.ScrollingMovementMethod;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
-public class MainActivity extends Activity {
+import me.borakostem.newchat.chatClient.Client;
+import me.borakostem.newchat.chatClient.ServerListener;
 
-    private Button button;
+public class MainActivity extends AppCompatActivity {
+    //Properties
+    static String user = "Bora Köstem";
+    static final int PORT = 6666;
+    public static Handler handler;
+    boolean started = false;
+    Client client1;
+    EditText messageInput;
+    Button sendTxt;
+    TextView message;
 
-    public void onCreate(Bundle savedInstanceState) {
-        final Context context = this;
-
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+        StrictMode.setThreadPolicy(policy);
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.main_activity);
 
-        button = (Button) findViewById(R.id.buttonUrl);
+        messageInput = findViewById(R.id.message_input);
+        sendTxt = findViewById(R.id.send_text);
 
-        button.setOnClickListener(new OnClickListener() {
+        message = findViewById(R.id.message_view);
+        message.setMovementMethod(new ScrollingMovementMethod());
 
+        message.setTextSize(18);
+        message.setTextColor(Color.BLACK);
+
+
+        message.setText("Please Enter Your Name:");
+
+        client1 = new Client(user,PORT);
+        client1.execute();
+        buttonListener();
+        handler = new Handler() {
+            public void handleMessage(Message msg) {
+                String messageText = (String) msg.obj;
+                message.append("\n" + messageText);
+            }
+        };
+    }
+
+    @Override
+    protected void onDestroy(){
+        super.onDestroy();
+        client1.terminate();
+    }
+
+    @Override
+    protected void onStop(){
+        super.onStop();
+        client1.terminate();
+    }
+
+
+    public void buttonListener(){
+        sendTxt.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View arg0) {
-                Intent intent = new Intent(context, BilkentNewsActivity.class);
-                startActivity(intent);
+            public void onClick(View v) {
+                String message = messageInput.getText().toString();
+                messageInput.setText("");
+                if(!message.matches("")) {
+                    client1.sendMsg(message);
+                    if (started == false) {
+                        new ServerListener(client1.getSocket()).start();
+                        //started = true;
+                    }
+                }
             }
         });
     }
+
+    public String getUser(){
+        return user;
+    }
+
+    public void setUser(String user){
+        this.user = user;
+    }
+
+
 }
