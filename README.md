@@ -20,11 +20,11 @@ In the academic life, social clubs have a remarkable role on developing differen
 [Group Meetings Log](group/meetingslog.md)
 #### Group Members
 - [Lamia Başak Amaç](LamiaLog.md)    
-- [Ege Kaan Eren](EgeKaanLog_log.md)
-- [Alper Kandemir](AlperLog_log.md)
-- [Bora Fenari Köstem](BoraLog_log.md)
-- [Kaan Yüksel](KaanLog_log.md)
-- [Azer Hasanaliyev](AzerLog_log.md)
+- [Ege Kaan Eren](EgeKaanLog.md)
+- [Alper Kandemir](AlperLog.md)
+- [Bora Fenari Köstem](BoraLog.md)
+- [Kaan Yüksel](KaanLog.md)
+- [Azer Hasanaliyev](AzerLog.md)
 
 ****
 **Instructor:** David Davenport   **TA:**  Irmak Türköz
