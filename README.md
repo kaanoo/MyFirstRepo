@@ -17,7 +17,7 @@ In the academic life, social clubs have a remarkable role on developing differen
 + **Implementation:** (20.05.2020)
 + **Reflections:** not yet...
 
-[Group Meetings Log](group/meetingslog.md)
+[Group Meetings Log](meetingslog.md)
 #### Group Members
 - [Lamia Başak Amaç](LamiaLog.md)    
 - [Ege Kaan Eren](EgeKaanLog.md)
