@@ -19,6 +19,47 @@ Actually we finished it but could not integrate it to the project.
 What remains to be done:
     Integration of manager profile, creating a system for student council and to display member of a certain club.
 
+CONTRIBUTIONS
+Lamia Başak Amaç : MapsActivity, MapsMain and StartActivity 
+Alper Kandemir : StoryActivity, EditProfileActivity, FollowersActivity, PostActivity
+Ege Kaan Eren : BilkentNewsActivity, RadioActivity and CreateEvent
+Azar Hasanaliyev : LoginActivity, SignUpActivity, ManagerProfileActivity and HomeActivity
+Bora Fenari Köstem : ChatClient Package
+Kaan Yüksel : SearchBarActivity, CommentsActivity and OptionsActivity
+
+firebase instructions:
+-for database: tools/firebase/realtime database/save and retrieve data/ connect and add the realtime database
+-for storage: tools/firebase/storage/upload and download a file with cloud storage/ connect and add the cloud storage
+-for auth: tools/firebase/authentication/email and password auth/ connect and add firebase auth 
+-then go to https://console.firebase.google.com
+-start it with testmode
+
+
+manifest permission:
+manifest permission <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    
+    
+    
+for maps function :
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCEGsn34zxakTw-bmfcThC3PIX6iunmyWo"/>
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <meta-data
+            android:name="com.google.android.geo.AIzaSyCEGsn34zxakTw-bmfcThC3PIX6iunmyWo"
+            android:value="AIzaSyCEGsn34zxakTw-bmfcThC3PIX6iunmyWo" />
+
+
+
+for gradle dependencies use that format "implementation 'com.google.firebase:firebase-storage:19.1.1' "
 
 dependencies:
 
@@ -45,4 +86,5 @@ such as photos or videos.
 
 
 -'com.google.android.gms:pl
+
 
