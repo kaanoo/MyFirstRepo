@@ -84,7 +84,23 @@ such as photos or videos.
 
 -'com.android.support:recyclerview-v7:28.0.0': to display a scrolling list of elements based on large data sets (or data that frequently changes). the main page has a lot of photos.
 
+'com.google.android.gms:play-services-maps:17.0.0':
 
--'com.google.android.gms:pl
+"com.google.android.gms:play-services-location:15.0.1":
+
+'com.google.android.libraries.places:places:2.2.0':
+
+'com.theartofdev.edmodo:android-image-cropper:2.8.+': simple image cropping library for Android.
+
+'com.github.ittianyu:BottomNavigationViewEx:2.0.4': An android lib for enhancing BottomNavigationView. we used no item shifting mode
+
+'com.github.shts:StoriesProgressView:3.0.0': Library that shows a horizontal progress like stories.
+
+'com.rengwuxian.materialedittext:library:2.1.4': AppCompat v21 makes it easy to use Material Design EditText in our apps, but it's so limited. this has more features and it used in edit profile for editText blanks
+
+'de.hdodenhof:circleimageview:3.1.0': for circle imageview
+
+'com.github.bumptech.glide:glide:4.11.0' Glide is a fast and efficient open source media management and image loading framework. we could use Picasso but glide has more methods and it is faster at displaying images from cache. Also, glide supports gifs.
+
 
 
