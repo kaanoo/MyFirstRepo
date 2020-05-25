@@ -1,3 +1,23 @@
+  Lamia Başak Amaç ~ 21601930
+  Ege Kaan Eren ~ 21601625
+  Alper Kandemir ~ 21703062
+  Bora Fenari Köstem ~ 
+  Azar Hasanaliyev ~ 21600591
+  Kaan Yüksel ~ 
+  
+ BILCLUB
+ That provides a social platform for university clubs.
+ 
+ Current status: 
+    Partly working...
+ 
+ Not working: 
+    The function for displaying club members remains because we did not have time to complete it.
+The facility of student councill's permission to create clubis also missing. Manager profile is not present. 
+Actually we finished it but could not integrate it to the project.
+
+What remains to be done:
+    Integration of manager profile, creating a system for student council and to display member of a certain club.
 
 
 dependencies:
