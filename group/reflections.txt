@@ -2,14 +2,32 @@
   Ege Kaan Eren ~ 21601625
   Alper Kandemir ~ 21703062
   Bora Fenari Köstem ~ 
-  Azar Hasanaliyev ~ 
+  Azar Hasanaliyev ~ 21600591
   Kaan Yüksel ~ 
   
   - In what ways you found the project a useful learning experience?
-        We experienced use of Android Studio, therefore we started to watch Android Studio - Udemy courses. We learned basic concepts of Android Studio.
+        We were using Android Studio and therefore, we took tutorials to learn the IDE.
+Also, we learned how to use different GUI layout patterns such as constraint layout, linear layout and relative layout.
+Besides, we gained the skills of preparing UML class diagram and implementing the classes accordingly step by step.
+We planned to use Firebase database. Therefore, we learned its structure and how to relate different references
+to be used in Bilclub. Moreover, we made use of some external libraries such as picasso, glide etc. So, we learned their 
+implementations. We also learned how to cooperate on single project and communicate with each other where necessary.
+However, the most important income of this project was probably learning how to debugg our code. Because
+we could not know what the problem is in the first place we had to check every possible situation that might cause error.
      
   - What did you dislike about project work?
+      We used zoom to communicate with each other but it restricted duration of our meeting. So, we had to recreate a meeting 
+by every 40 minutes and it interrupted our talk. Also, we think that we designed a projet beyond our level of knowledge. 
+So, we faced difficulties in implementation stage.
+
   - What was the most difficult aspect of it?
+      Undoubtedly, the most difficult part was entegration due to several reasons such as different emulators, different gradle settings, variable names etc. Also, learning how to use database (firebase) was difficult.
+      
   - What would you do differently if you had to start over again?
+      Less functionality would be better for us because we faced difficulty completing all project. Unluckily, we encountered with Corona-Virus, we couldn't start early to our project. We wish we started our project earlier.
+      
   - How much time did you spend on it? 
+      We spent 3 weeks to implementation stage.
+      
   - Are you proud of what you have achieved?
+      Yes, we are really proud of what we achieved because we made relatively sophisticated application.
