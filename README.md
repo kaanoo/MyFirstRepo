@@ -15,7 +15,9 @@ In the academic life, social clubs have a remarkable role on developing differen
 + **UI Design:** completed (08.03.2020)
 + **Detailed Design:** completed(13.05.2020)
 + **Implementation:** completed(20.05.2020)
-+ **Reflections:** not yet...
++ **Project video demo reviews:** completed (20.05.2020)
++ **Reflections:** completed (26.05.2020)
++ **Peer grading:** completed (26.05.2020)
 
 [Group Meetings Log](meetingslog.md)
 #### Group Members
