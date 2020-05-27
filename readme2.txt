@@ -48,14 +48,14 @@ manifest permission <uses-permission android:name="android.permission.INTERNET" 
 for maps function :
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyCEGsn34zxakTw-bmfcThC3PIX6iunmyWo"/>
+            android:value="AIzaSyCEGsn34zxakTw-bmfcThC3PIX6iunmyWo"/>  //adding API Key to the manifest
         <meta-data
             android:name="com.google.android.gms.version"
-            android:value="@integer/google_play_services_version" />
+            android:value="@integer/google_play_services_version" />      //adding manifest to the application
 
         <meta-data
             android:name="com.google.android.geo.AIzaSyCEGsn34zxakTw-bmfcThC3PIX6iunmyWo"
-            android:value="AIzaSyCEGsn34zxakTw-bmfcThC3PIX6iunmyWo" />
+            android:value="AIzaSyCEGsn34zxakTw-bmfcThC3PIX6iunmyWo" />     //adding API Key to the manifest
 
 
 
@@ -84,11 +84,11 @@ such as photos or videos.
 
 -'com.android.support:recyclerview-v7:28.0.0': to display a scrolling list of elements based on large data sets (or data that frequently changes). the main page has a lot of photos.
 
-'com.google.android.gms:play-services-maps:17.0.0':
+'com.google.android.gms:play-services-maps:17.0.0': adding google play services to the project
 
-"com.google.android.gms:play-services-location:15.0.1":
+"com.google.android.gms:play-services-location:15.0.1": adding location services from google play to the project
 
-'com.google.android.libraries.places:places:2.2.0':
+'com.google.android.libraries.places:places:2.2.0':  adding places services from google play to the project (searching places)
 
 'com.theartofdev.edmodo:android-image-cropper:2.8.+': simple image cropping library for Android.
 
