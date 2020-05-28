@@ -27,14 +27,16 @@ Azar Hasanaliyev : LoginActivity, SignUpActivity, ManagerProfileActivity and Hom
 Bora Fenari Köstem : ChatClient Package
 Kaan Yüksel : SearchBarActivity, CommentsActivity and OptionsActivity
 
-firebase instructions:
+To run project: merge the app.rar, build.rar and intermediates.rar with bilclub.rar properly. We had to upload separately because of 25mb file limitation. app directory includes build directory and build directory includes intermediates directory. Lastly, bilclub directory includes all.
+
+Firebase instructions:
 -for database: tools/firebase/realtime database/save and retrieve data/ connect and add the realtime database
 -for storage: tools/firebase/storage/upload and download a file with cloud storage/ connect and add the cloud storage
 -for auth: tools/firebase/authentication/email and password auth/ connect and add firebase auth 
 -then go to https://console.firebase.google.com
 -start it with testmode
 
-chat server instructions:
+Chat server instructions:
 -for connection: open a serverSocket with a try - catch method
 -for clients: accept client's socket with serverSocket.accept(); and add the clients to the client counter.
 -for read messages: with BufferedReader create a listener for incoming messages from client.
