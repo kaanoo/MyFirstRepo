@@ -13,9 +13,13 @@ Meetings
 28.04.2020 - Implementation(zoom meeting)(all members)
 30.04.2020 - Implementation(zoom meeting)(without Kaan Yüksel)
 01.05.2020 - Implementation(zoom meeting)(all members)
+
 05.05.2020 - Implementation(zoom meeting)(all members)
+
 07.05.2020 - Implementation(zoom meeting)(all members)
+
 08.05.2020 - Implementation(zoom meeting)(all members)
+
 09.05.2020 - Implementation(zoom meeting)(without Azer and Kaan Yuksel)
 10.05.2020 - Implementation(zoom meeting)(without Bora Kostem)
 11.05.2020 - for Detail Design Report(zoom meeting/all members)
