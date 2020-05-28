@@ -1,7 +1,11 @@
 Meetings
+
 15.02.2020 - Group Project Selection(all members)
+
 19.02.2020 - for Requirement Report(all members)
+
 22.02.2020 - Deciding to the overview(all members)
+
 05.03.2020 - for UI Design Report(all members)
 
 -CORONA VIRUS-
