@@ -38,7 +38,7 @@ chat server instructions:
 -for connection: open a serverSocket with a try - catch method
 -for clients: accept client's socket with serverSocket.accept(); and add the clients to the client counter.
 -for read messages: with BufferedReader create a listener for incoming messages from client.
--for broadcast: with a for loop count all the client sockets and send the message with PrintwWriter
+-for broadcast: with a for loop, count all the client sockets and send the message with PrintwWriter
 
 manifest permission:
 manifest permission <uses-permission android:name="android.permission.INTERNET" />
